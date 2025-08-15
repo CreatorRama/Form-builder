@@ -17,7 +17,7 @@ const PreviewPage = () => {
   useEffect(() => {
     const fetchForm = async () => {
       try {
-        const response = await axios.get(`/api/forms/${formId}`);
+        const response = await axios.get(`${apiUrl}/api/forms/${formId}`);
         setForm(response.data);
         
         // Initialize responses

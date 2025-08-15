@@ -5,7 +5,7 @@ import ImageUpload from '../components/common/ImageUpload';
 import CategorizeQuestion from '../components/FormBuilder/CategorizeQuestion';
 import ClozeQuestion from '../components/FormBuilder/ClozeQuestion';
 import ComprehensionQuestion from '../components/FormBuilder/ComprehensionQuestion';
-
+const apiUrl = import.meta.env.VITE_API_URL;
 const BuilderPage = () => {
   const [form, setForm] = useState({
     title: 'Untitled Form',
@@ -57,7 +57,7 @@ const BuilderPage = () => {
 
   const saveForm = async () => {
     try {
-      const response = await axios.post('/api/forms', form);
+      const response = await axios.post(`${apiUrl}/api/forms`, form);
       navigate(`/preview/${response.data._id}`);
     } catch (error) {
       console.error('Error saving form:', error);

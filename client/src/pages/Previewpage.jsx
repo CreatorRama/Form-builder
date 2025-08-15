@@ -6,7 +6,7 @@ import { HTML5Backend } from 'react-dnd-html5-backend';
 import PreviewCategorize from '../components/FormPreview/PreviewCategorize';
 import PreviewCloze from '../components/FormPreview/PreviewCloze';
 import PreviewComprehension from '../components/FormPreview/PreviewComprehension';
-const apiUrl = import.meta.env.VITE_API_URL;
+const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 const PreviewPage = () => {
   const { formId } = useParams();
   const navigate = useNavigate();

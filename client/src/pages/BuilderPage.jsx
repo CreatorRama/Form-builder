@@ -5,7 +5,7 @@ import ImageUpload from '../components/common/ImageUpload';
 import CategorizeQuestion from '../components/FormBuilder/CategorizeQuestion';
 import ClozeQuestion from '../components/FormBuilder/ClozeQuestion';
 import ComprehensionQuestion from '../components/FormBuilder/ComprehensionQuestion';
-const apiUrl = import.meta.env.VITE_API_URL;
+const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000'
 const BuilderPage = () => {
   const [form, setForm] = useState({
     title: 'Untitled Form',
